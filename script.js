@@ -14,6 +14,7 @@ let taskForm = document.getElementById("taskForm");
 let completedList = document.getElementById("completedList");
 let clearButton = document.getElementById("clear");
 let completedCount = document.getElementById("completedCounter");
+let duedate = document.getElementById("dueDate");
 
 taskForm.addEventListener("submit", handleSubmit); 
 
@@ -85,6 +86,7 @@ function addToDoItem(text) {
     id: identifier,
     text: String(text),
     completed: false,
+    
   
    };
 
@@ -99,7 +101,12 @@ function renderToDoItem() {
 
   for (let i = 0; i < todoItems.length; i++) {
     let tempTask = document.createElement('li');
-    tempTask.textContent = todoItems[i].text;
+    
+
+    let dueDateValue = duedate.value;
+
+    let taskTextNode = document.createTextNode(todoItems[i].text + ' - Due Date: ' + dueDateValue);
+    tempTask.appendChild(taskTextNode);
 
     let tempButton = document.createElement('button');
     tempButton.textContent = '✔';
@@ -162,3 +169,5 @@ function counterColor() {
 
   }
 }
+
+
