@@ -198,3 +198,29 @@ h2 {
   padding: 0.5rem;
   text-decoration: underline;
 }
+
+p {
+  color: rgb(70, 64, 64);
+  font-size: 15px;
+ 
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+input[type="date"] {
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border: 2px solid rgb(65, 63, 63);
+  background-color: rgb(25, 20, 20);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  margin: 0.5rem;
+  align-content: center;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border: 2px solid rgb(30, 215, 96);
+  transition: 0.3s;
+}
