@@ -3,7 +3,7 @@
 
 <head>
   <!-- Set the page title -->
-  <title>Assignment 04 - Finishing a Todo List App</title>
+  <title>listify</title>
 
   <!-- Set the charset we're using to UTF-8 -->
   <meta charset="utf-8" />
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="./style.css" />
 
   <!-- Set the Favicon  -->
-  <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+  <link rel="icon" href="./images/favicon/favicon.ico" type="image/svg+xml" />
 </head>
 <body>
 
@@ -40,8 +40,39 @@
 
   -->
 
-  <main>
-    <div id="app"></div>
+  <main> 
+    
+    <div class="app" id="App"> 
+      <div class="top">
+      <h1>Listify</h1>
+      </div>
+      
+
+      <div class="addtodo">
+       <form id="taskForm">
+      <input type="text" placeholder="Add a new item..." id="taskInput"/>
+      <button id="taskButton" type="submit" >+</button>
+      </form>
+
+    </div>
+
+<h2>To Do</h2>
+      <ul class="Todoform" id="taskList"> </ul>
+    
+    <div class="completed">
+      <h2>Completed</h2>
+      <h3 id="completedCounter">No completed tasks...</h3>
+      <ul id="completedList"></ul>
+
+    </div>
+    <div class="bottom">
+      <div class="botbuttons">
+
+<input type="button" value="Clear Completed" id="clear"/>
+
+</div>
+    </div>
+  </div>
   </main>
 
   <!-- Add JavaScript File -->
