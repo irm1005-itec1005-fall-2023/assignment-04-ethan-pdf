@@ -74,7 +74,7 @@ function removeToDoItem(todoId) {
 }
 
 function addToDoItem(text) {
-  // Implement the logic to add a task here
+  
   let identifier = 1;
   if (todoItems.length > 0) {
     identifier = todoItems[todoItems.length - 1].id + 1;
@@ -82,7 +82,7 @@ function addToDoItem(text) {
 
   let dueDate = new Date(duedate.value);
   
-  // Adding one day to the due date
+ 
   dueDate.setDate(dueDate.getDate() + 1);
 
   let task = {
@@ -113,10 +113,18 @@ function renderToDoItem() {
    
     let tempDate = document.createElement('p');
     let dueDateValue = todoItems[i].duedate;
-    tempDate.textContent = 'Due Date: ' + dueDateValue;
-
     let options = { day: 'numeric', month: 'short',  year: 'numeric'};
-    tempDate.textContent = 'Due - ' + dueDateValue.toLocaleDateString(undefined, options);
+    
+
+   if (dueDateValue.toLocaleDateString(undefined, options) === "Invalid Date" ) { tempDate.textContent = "No Due Date"; }
+   
+   else 
+    {
+    tempDate.textContent = 'Due Date: ' + dueDateValue.toLocaleDateString(undefined, options);
+   }
+
+
+   
 
 
     tempButton.addEventListener('click', function () {
@@ -176,3 +184,4 @@ function counterColor() {
 
   }
 }
+
