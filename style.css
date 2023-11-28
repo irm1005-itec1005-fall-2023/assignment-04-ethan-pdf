@@ -51,7 +51,7 @@ ul {
   list-style: none;
   font-size: 20px;
   font-weight: 500;
-  width: 30rem;
+  width: 35rem;
 }
 
 li {
@@ -137,7 +137,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
+  
  margin-top: 40px;
   margin-bottom: 40px;
   
@@ -223,4 +223,16 @@ input[type="date"]:focus {
   outline: none;
   border: 2px solid rgb(30, 215, 96);
   transition: 0.3s;
+}
+
+img{
+  width: 50%;
+ 
+  
+  
+  
+  margin: 0.5rem;
+  box-shadow: none;
+  
+
 }
